@@ -1,0 +1,24 @@
+CREATE TABLE company(
+                         first_nme VARCHAR(70) NOT NULL ,
+                         model VARCHAR(80) NOT NULL ,
+                         price int NOT NULL ,
+                         email VARCHAR(80) NOT NULL
+)
+INSERT INTO company(first_nme, model, price,email)
+VALUES ('NTS','TV',67890,'ntstv@gmail.com'),
+       ('Apple','XS',70000,'applexs@gmail.com'),
+       ('Samsung','Galaxy',80000,'samsunggalax@gmail.com'),
+       ('Redmi','A1',35600,'redmia1@gmail.com'),
+       ('Apple','8+',89699,'apllemax@gmail.com'),
+       ('Apple','8+',45000,'applemaxpro@gmail.com');
+SELECT *FROM company;
+DELETE FROM company WHERE first_nme='NTS';
+SELECT * FROM company;
+SELECT * FROM company WHERE first_nme='Apple' AND price<70000;
+SELECT * FROM company;
+SELECT * FROM company WHERE price>=46500;
+SELECT max(price)FROM company;
+SELECT min(price)FROM company;
+SELECT * FROM company ORDER BY price DESC;
+SELECT sum(price)FROM company;
+SELECT * FROM company;
